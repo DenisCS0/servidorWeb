@@ -15,18 +15,15 @@
         <script src='/web/script-seccio-frontendproductes.js'></script>
         <script src='/web/script-utils.js'></script>
         <script src='/web/script.js'></script>
-
-        <!-- Icones d'aplicació per a navegadors d'escriptori, webapps iOS i webapps Android -->
-        <!-- Icones generats amb: https://www.favicon-generator.org/ -->
-        <link href="/web/appicons/android-icon-192x192.png" rel="icon" type="image/png" sizes="192x192">
-        <link href="/web/appicons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
-        <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="msapplication-TileImage" content="/web/appicons/ms-icon-144x144.png">
-        <meta name="theme-color" content="#ffffff">
-        <link href="/web/appicons/manifest.json" rel="manifest">
+          <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+          <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+          <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+         <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        
     </head>
     <body onload='inicia()'>
         <div id='frontendMenuWeb' class='flexRow desktop'>
+          
             <div class='botoMenu' onclick='navegacio.canviaSeccio("frontendHome")'>Inici</div>
             <div class='botoMenu' onclick='navegacio.canviaSeccio("frontendPresentacio")'>Presentació</div>
             <div class='botoMenu' onclick='navegacio.canviaSeccio("frontendProductes")'>Productes</div>
@@ -36,29 +33,121 @@
             <div id='botoGestioProductesWeb' class='botoMenu none' onclick='navegacio.canviaSeccio("backofficeProductes")'>Gestió productes</div>
             <div id='botoLogoutWeb' class='botoMenu none' onclick='login.tancaLaSessio()'>Sortir</div>
         </div>
+
+
         <div id='frontendMenuMobil' class='flexColumn mobile'>
-            <div class='botoMenu' onclick='navegacio.canviaSeccio("frontendHome")'>Inici</div>
-            <div class='botoMenu' onclick='navegacio.canviaSeccio("frontendPresentacio")'>Presentació</div>
-            <div class='botoMenu' onclick='navegacio.canviaSeccio("frontendProductes")'>Productes</div>
-            <div class='botoMenu' onclick='navegacio.canviaSeccio("frontendContacte")'>Contacte</div>
-            <div id='botoLoginMobil' class='botoMenu' onclick='popups.mostraPopup("popupLogin")'>Login backoffice</div>
+          
             <div id='botoGestioUsuarisMobil' class='botoMenu none' onclick='navegacio.canviaSeccio("backofficeUsuaris")'>Gestió usuaris</div>
             <div id='botoGestioProductesMobil' class='botoMenu none' onclick='navegacio.canviaSeccio("backofficeProductes")'>Gestió productes</div>
             <div id='botoLogoutMobil' class='botoMenu none' onclick='login.tancaLaSessio()'>Sortir</div>
+            
+            <div id="sidebar" class="sidebar">
+              <a class="boton-cerrar" onclick="ocultar()">&times;</a> <br>
+              <div class='botoMenu1' onclick='ocultar();navegacio.canviaSeccio("frontendHome")'>Inici</div>
+              <div class='botoMenu1' onclick='ocultar();navegacio.canviaSeccio("frontendPresentacio")'>Presentació</div>
+              <div class='botoMenu1' onclick='ocultar();navegacio.canviaSeccio("frontendProductes")'>Productes</div>
+              <div class='botoMenu1' onclick='ocultar();navegacio.canviaSeccio("frontendContacte")'>Contacte</div>
+              <div class='botoMenu1' onclick='ocultar();popups.mostraPopup("popupLogin")'>Login backoffice</div>
+            </div>
+            <div id ='sidebarFondo' onclick="ocultar()">
+            
+            </div>
+            <a id="abrir" class="abrir-cerrar" href="javascript:void(0)" onclick="mostrar()"> 
+               Menu
+          </a>
+          
+         
+            
+            
+           
         </div>
+
         <div id='frontendHome'>
-            Pàgina principal
+            <div id="mainfoto1"></div>
+            <div id="contenedor-slider" class="contenedor-slider desktop">
+                <div id="slider" class="slider">
+                   <section name='sliderportada' class="slider__section"><img src="https://1do7392rmjnc1hgfjw1j27yx-wpengine.netdna-ssl.com/wp-content/uploads/sites/2/2020/01/hong-kong-bali-cathay-pacific-jtb-viajes.jpg" class="slider__img"></section>
+                   <section name='sliderportada' class="slider__section"><img src="https://cdn1.cazaviajes.es/0x0/ES---generic-1---Link---CTA--1-_1.png" class="slider__img"></section>
+                   <section name='sliderportadafrontendContact' class="slider__section"><img src="https://ventajas.umh.es/files/2019/06/Ofertas-Europa-julio-2019.jpg" class="slider__img"></section>
+                   <section name='sliderportada' class="slider__section"><img src="https://ventajas.umh.es/files/2019/06/Ofertas-Europa-julio-2019.jpg" class="slider__img"></section>
+                 </div>
+                 <div id="btn-prev" class="btn-prev" onclick="slider('anterior')">&#60;</div>
+                 <div id="btn-next" class="btn-next" onclick="slider('siguiente')">&#62;</div>
+            </div>
+            <div class= "viajes">
+                <div class="demo-card-square mdl-card mdl-shadow--2dp">
+                    <div class="mdl-card__title mdl-card--expand back1">
+                        <h2 class="mdl-card__title-text">Oferta</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Aenan convallis.
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                            Ver viajes
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
         <div id='frontendPresentacio'>
-            Pàgina amb una presentacio de l'empresa
+
+            <div id="tituloPre">
+                <h3>Nuestro ADN</h3>
+                <h5>Somos una empresa con gente cercana, y con la idea de que siempre hay algo que mejorar.</h5>
+                <h6>Nos gusta definir nuestro ADN a través de los siguientes valores:</h6>
+            
+            </div> 
+            <div id="tabla">
+                <table>
+                    <tr>
+                        <th>Valores</th>
+                        <th>Por que?</th>
+                        
+                    </tr>  
+                    <tr>
+                        <td><b>Viajes Familiares</b></td>
+                        <td>Empresa especializada en viajes de ocio para toda la familia</td>
+                        
+                    </tr>
+                    <tr>
+                        <td><b>Precios Asequibles</b></td>
+                        <td>Trabajamos con nuestros socios para ofrecer los precios más competitivos</td>
+                        
+                    </tr> 
+                    <tr>
+                        <td><b>Eficiencia</b></td>
+                        <td>Centrarse en lo que es realmente importante, y hacerlo con menos recursos</td>
+                        
+                    </tr>
+                    <tr>
+                        <td><b>Cercanía</b></td>
+                        <td> Trabajamos para estar cerca de nuestros clientes con productos asequibles y adecuados para ellos</td>
+                        
+                    </tr>   
+                </table>
+            </div>
         </div>
         <div id='frontendProductes'>
             <div id='productesLoading'>Carregant productes ...</div>
             <div id='productesContinguts' class='flexColumn'></div>
         </div>
         <div id='frontendContacte'>
-            Pàgina amb informacio de contacte
+            <div id="titulo_tabla"><br><h3>Donde puedes encontrarnos</h3>
+                
+                </div>
+            
+           <div id="mapaMobil"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1498.5526147648911!2d2.002709230816307!3d41.306574350259204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49cd8ddb53ac5%3A0xc3a3d6deb47ea43a!2sEscuela%20Salvador%20Lluch!5e0!3m2!1ses!2ses!4v1583871628406!5m2!1ses!2ses" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe> </div>
+           
+          
+           
+           
         </div>
+        
+        
+        
+     </div>
         <div id='backofficeUsuaris'>
             <div id='backofficeUsuarisLoading'>Carregant usuaris ...</div>
             <div id='backofficeUsuarisContinguts' class='flexColumn'></div>

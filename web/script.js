@@ -38,3 +38,43 @@ function iniciaSeccio(seccio) {
     }
 }
 
+var imagenslider = 2
+function slider(direccion) {
+    let ref = document.getElementsByName('sliderportada'),
+        cnt = 0
+    if (direccion =='anterior') {
+        imagenslider = imagenslider - 1
+        if (imagenslider < 0) {
+            imagenslider = ref.length - 1
+        }
+    }
+
+    if (direccion =='siguiente') {
+        imagenslider = imagenslider + 1
+        if (imagenslider >= ref.length) {
+            imagenslider = 0
+        }
+    }
+    console.log(imagenslider)
+    for (cnt = 0; cnt < ref.length; cnt = cnt + 1) {
+        ref[cnt].style.display = 'none'
+        if (cnt == imagenslider) {
+            ref[cnt].style.display = 'flex'
+        }
+    }
+
+}
+
+function mostrar() {
+    document.getElementById("sidebar").style.width = "300px";
+    document.getElementById("abrir").style.transform = "translateY(-20px)";
+    document.getElementById("sidebarFondo").style.display = "flex";
+
+    
+}
+
+function ocultar() {
+    document.getElementById("sidebar").style.width = "0";
+    document.getElementById("abrir").style.transform = "translateY(0px)";
+    document.getElementById("sidebarFondo").style.display = "none";
+}

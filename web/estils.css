@@ -15,50 +15,261 @@ table, th, td {
     border-collapse: collapse;
     border: 1px solid black;
 }
-
-.botoMenu {
-    color: blue;
-    cursor: pointer;
-    margin: 0 16px;
-}
-
-.botoMenu:hover {
-    text-decoration: underline;
-}
-
 body {
     font-family: "Open Sans";
+    background-color: white;
 }
-
+body > div {
+    display: none;
+}
 body > #frontendHome {
     display: flex;
+    flex-direction: column;
+    
 }
-
-body > #frontendPresentacio {
-    display: none;
-}
-
-body > #frontendProductes {
-    display: none;
-}
-
-body > #frontendProductes > #productesContinguts {
+#frontendMenuWeb {
+    background-color: black;
+    justify-content: center;
+    min-height: 6%;
+    max-height: 8%;
+    align-items: center;
     width: 100%;
+    opacity: 90%;
+    position: fixed;
+    z-index: 100;
+    
 }
 
-body > #frontendContacte {
-    display: none;
+
+#frontendMenuMobil {
+  
+  z-index: 10;
+  opacity: 90%;
+
+
+}
+.botoMenu {
+    color: white;
+    cursor: pointer;
+    margin: 0 16px;
+    position: sticky;
+    
+}
+.botoMenu:hover {
+  color: grey;
+}
+.botoMenu1 {
+  
+  color: white;
+  position: sticky;
+  margin: 0 16px;
+  width: 26%;
 }
 
-body > #backofficeUsuaris {
-    display: none;
+#frontendMenuMobil > #botoLoginMobil {
+  background-color: black;
+  color: white;
+  position: sticky;
+  display: none;
+}
+@media only screen and (min-device-width: 599px) {
+  #frontendMenuMobil > .botoMenu {
+    width: 100%;
+
+    z-index: 10;
+  }
+  
 }
 
-body > #backofficeProductes {
-    display: none;
+.sidebar {
+  position: fixed;
+  height: 100%;
+  width: 0;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  background-color: #00324b;
+  overflow-x: hidden;
+  transition: 0.4s;
+  padding: 1rem 0;
+  box-sizing:border-box;
+  z-index: 6000;
 }
 
-body > #popups {
+
+.sidebar .boton-cerrar {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 2rem;
+  display: block;
+  padding: 0;
+  line-height: 1.5rem;
+  margin: 0;
+  height: 32px;
+  width: 32px;
+  text-align: center;
+  
+}
+.sidebar ul, .sidebar li{
+  margin:0;
+  padding:0;
+  list-style:none inside;
+}
+
+.sidebar ul {
+  margin: 4rem auto;
+  display: block;
+  width: 80%;
+  min-width:200px;
+}
+
+.sidebar a {
+  display: block;
+  font-size: 120%;
+  color: #eee;
+  text-decoration: none;
+  
+}
+
+.sidebar a:hover{
+  color:#fff;
+  background-color: #f90;
+  cursor: pointer;
+
+}
+
+#sidebarFondo {
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 30%;
+  top: 0;
+  left: 70%;
+  /*background-color: gray;*/
+  overflow-x: hidden;
+  transition: 0.7s;
+  padding: 1rem 0;
+  box-sizing:border-box;
+  z-index: 6000;
+  
+}
+
+#cerrar {
+  display:none;
+}
+
+#contenido {
+  transition: margin-left .4s;
+  padding: 1rem;
+}
+
+#abrir {
+  color: white;
+  font-size:1rem;
+  text-align: center;  
+  background-color: black; 
+  text-decoration: none;
+  width: 300px;
+  position: fixed;
+  transform: translateY(0);
+  transition: transform 0.5s ease;
+  
+}
+#frontendContacte {
+  flex-direction: column;
+}
+#frontendPresentacio {
+  flex-direction: column;
+}
+@media only screen and (max-device-width: 599px) {
+#mapaMobil {
+  
+  flex-direction: row;
+  
+  width: 100%;
+  z-index: -1;
+  top: 20px;
+}
+}
+@media only screen and (min-device-width: 599px) {
+#mapaMobil {
+  margin-top: 50px;
+  
+  
+  width: 100%;
+  
+}
+}
+#frontendMenuMobil > #abrir {
+  color: white;
+  font-size:1rem;
+  text-align: center;  
+  background-color: black; 
+  text-decoration: none;
+  width: 100%;
+}
+.botoMenu1:hover {
+    color: grey;
+    cursor: pointer;
+}
+#fotoprincipal {
+    width: 100%;
+    padding-top: 3%;
+    justify-content: center;
+    align-items: center;
+}
+#mainfoto {
+  background-image: url(https://s2.best-wallpaper.net/wallpaper/3840x2160/1804/Sky-clouds-sunset-dusk_3840x2160.jpg);
+  height: 500px;
+  width: 100%;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  
+  
+}
+#frontendhome > #mainfoto1 {
+  background-image: url(https://s2.best-wallpaper.net/wallpaper/3840x2160/1804/Sky-clouds-sunset-dusk_3840x2160.jpg);
+  height: 500px;
+  width: 100%;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  
+}
+@media only screen and (min-device-width: 600px) {
+.viajes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  z-index: -10;
+  
+
+}
+.viajes > div {
+  margin: 16px;
+  z-index: -10;
+}
+}
+@media only screen and (max-device-width: 599px) {
+.viajes1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: -10;
+}
+.viajes1 > div {
+  margin: 16px;
+  z-index: -10;
+}
+}
+#productesContinguts {
+    width: 100%;
+} 
+#popups {
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     display: none;
@@ -69,11 +280,123 @@ body > #popups {
     height: 100%;
     width: 100%;
 }
-
 #popups > div {
     border: solid 1px black;
     background-color: lightcyan;
     display: none;
 }
+@media only screen and (min-device-width: 599px) {
+.contenedor-slider {
+    margin: 36px auto;
+    width: 85%;
+    max-width: 900px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 0 10px #fff, 0 15px 50px;
+    min-height: 500px;
+    margin-top: 100px;
+    
+}
 
+.slider {
+    width: 100%;
+    height: 100%;
+    
+  }
 
+  .slider__section {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  .slider__img {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+
+  .btn-prev, .btn-next {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 40px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 50%;
+    font-family: monospace;
+    cursor: pointer;
+  }
+  
+  .btn-prev:hover, .btn-next:hover {
+    background: white;
+  }
+  
+  .btn-prev {
+    left: 10px;
+  }
+  
+  .btn-next {
+    right: 10px;
+  }
+  
+  .back1 {
+    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/V%C3%A4xj%C3%B6_Cathedral_1.jpg/330px-V%C3%A4xj%C3%B6_Cathedral_1.jpg') center / cover;
+    
+  }
+}
+th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 0.25em;
+  
+  }
+  tr:nth-child(odd) {background: lightblue }
+
+  th{
+      background-color: grey !important;
+      color: white;
+      font-weight: bold;
+  
+  }
+  #tabla {
+      border-collapse: collapse;
+      margin-top: 40px;
+      z-index: -15;
+      
+  }
+
+  #titulo_tabla {
+    
+  }
+  #tabla2 {
+    z-index: -10;
+    margin-bottom: 25px;
+  }
+  th:first-child {
+  text-align: right;
+}
+th:nth-child(2) {
+  text-align: left;
+}
+td {
+  border: 1px solid black;
+  padding: 0.25em;
+}
+td:first-child {
+  font-weight: bold;
+  text-align: right;
+}
+
+#tituloPre {
+  margin-top: 30px;
+  
+}
