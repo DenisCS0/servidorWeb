@@ -23,7 +23,7 @@ class ObjSeccioFrontendProductes {
         if (objRebut.resultat === 'ok') {
             for (cntProducte = 0; cntProducte < objRebut.missatge.length; cntProducte = cntProducte + 1) {
                 valor = objRebut.missatge[cntProducte]
-                codiHTML = codiHTML + '<img src="' + valor.imatge + '" width="100" />'
+                codiHTML = codiHTML + '<img src="' + valor.imatge + '" width="100"' + ' style= "margin-top:60px;" />'
                 codiHTML = codiHTML + '<h3>' + valor.nom +'</h3>'
                 codiHTML = codiHTML + '<div>' + valor.descripcio +'</div>'
                 codiHTML = codiHTML + '<div>' + valor.preu +' €</div>'

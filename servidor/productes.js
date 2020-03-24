@@ -16,7 +16,7 @@ class Obj {
             taula = null
     
         // Forçem una espera al fer login amb codi, perquè es vegi la càrrega (TODO: esborrar-ho)
-        await utils.promiseWait(1000) 
+        await utils.promiseWait(1800) 
         
         // Mira si la taula "productes" existeix
         try {
@@ -30,11 +30,13 @@ class Obj {
             try {
                 sql = 'CREATE TABLE productes (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, nom VARCHAR(50) NOT NULL, descripcio TEXT, preu INT(6), imatge VARCHAR(255))'
                 await db.promiseQuery(sql)
-                sql = 'INSERT INTO productes (nom, descripcio, preu, imatge) VALUES ("Tele", "Tele molt xula", 800, "/web/imatges/producte-1.jpg")'
+                sql = 'INSERT INTO productes (nom, descripcio, preu, imatge) VALUES ("Visas y permisos", "Olvidate de los tramites interminables cuando viajas a otro pais, aqui te lo ponemos mas facil que nunca", 79.99, "/web/imatges/alojamiento.jpg")'
                 await db.promiseQuery(sql)
-                sql = 'INSERT INTO productes (nom, descripcio, preu, imatge) VALUES ("Batidora", "Batidora molt xula", 20, "/web/imatges/producte-2.png")'
+                sql = 'INSERT INTO productes (nom, descripcio, preu, imatge) VALUES ("Guia turistica", "El conocimiento es poder, conoce hasta el ultimo detalle de tu ciudad preferida ", 59.99, "/web/imatges/paquete.jpeg")'
                 await db.promiseQuery(sql)
-                sql = 'INSERT INTO productes (nom, descripcio, preu, imatge) VALUES ("Aspirador", "Aspirador molt xulo", 300, "/web/imatges/producte-3.jpg")'
+                sql = 'INSERT INTO productes (nom, descripcio, preu, imatge) VALUES ("Seguro de viaje", "Comprando nuestro seguro de viaje, olvidate de las preocupaciones y las sorpresas desagradables, nosotros nos encargamos de todo ", 149.99, "/web/imatges/seguro.jpeg")'
+                await db.promiseQuery(sql)
+                sql = 'INSERT INTO productes (nom, descripcio, preu, imatge) VALUES ("Transporte local", "Acceso gratuito a todos los medios de transporte publicos en la ciudad de destino, ampliable a más ciudades ", 199.99, "/web/imatges/transporte.jpeg")'
                 await db.promiseQuery(sql)
             } catch (e) {
                 console.error(e)

@@ -19,7 +19,7 @@
           <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
           <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
          <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-        
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     </head>
     <body onload='inicia()'>
         <div id='frontendMenuWeb' class='flexRow desktop'>
@@ -130,8 +130,11 @@
             </div>
         </div>
         <div id='frontendProductes'>
-            <div id='productesLoading'>Carregant productes ...</div>
+            
+
             <div id='productesContinguts' class='flexColumn'></div>
+            <div id='productesLoading'> <img id="foto" src="/web/imatges/cargando.gif"> </div>
+            
         </div>
         <div id='frontendContacte'>
             <div id="titulo_tabla"><br><h3>Donde puedes encontrarnos</h3>

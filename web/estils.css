@@ -400,3 +400,23 @@ td:first-child {
   margin-top: 30px;
   
 }
+
+#productesLoading {
+  
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  opacity: .8;
+}
+
+#foto {
+  
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  align-items: center;
+  opacity: .8;
+}
+
