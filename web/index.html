@@ -130,30 +130,50 @@
             </div>
         </div>
         <div id='frontendProductes'>
-            
 
-            <div id='productesContinguts' class='flexColumn'></div>
-            <div id='productesLoading'> <img id="foto" src="/web/imatges/cargando.gif"> </div>
+            <div id='productesContinguts' class='flexColumn'> </div>
+            <div id='productesLoading'> <img id="foto" src="/web/imatges/cargando.gif">  </div>
             
         </div>
         <div id='frontendContacte'>
-            <div id="titulo_tabla"><br><h3>Donde puedes encontrarnos</h3>
-                
-                </div>
+            <div id="titulo_tabla"><h3>Donde puedes encontrarnos</h3>  </div>
             
-           <div id="mapaMobil"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1498.5526147648911!2d2.002709230816307!3d41.306574350259204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49cd8ddb53ac5%3A0xc3a3d6deb47ea43a!2sEscuela%20Salvador%20Lluch!5e0!3m2!1ses!2ses!4v1583871628406!5m2!1ses!2ses" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe> </div>
-           
-          
-           
-           
-        </div>
-        
-        
-        
+           <div id="mapaMobil"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1498.5526147648911!2d2.002709230816307!3d41.306574350259204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49cd8ddb53ac5%3A0xc3a3d6deb47ea43a!2sEscuela%20Salvador%20Lluch!5e0!3m2!1ses!2ses!4v1583871628406!5m2!1ses!2ses"  height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe> </div>
+            <div id="formulario"><h3>Date de alta y disfruta de todas las ventajas!</h3>
+            
+                    
+                    Nombre:<br/>
+                    <input type='text' name='firstname' value='' pattern="[^0-9]*" title="El nom no pot tenir números">
+                    <br/>
+                    Telefono:<br/>
+                    <input type='text' name='lastname' pattern="[^0-9]*" title="El cognom no pot tenir números">
+                    <br/>
+                    Correo electronico:<br/>
+                    <input type='text' name='email' value='' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="No és un format de correu vàlid"> 
+                    <br>
+                    Contraseña:<br/>
+                    <input type='text' name='password' value='' pattern="[a-z0-9._%+-]" title="No és un format de contrasenya vàlid">
+
+                    <br>
+                   <br>
+                  
+                    Deseo recibir correos electronicos con ofertas
+                    <input type='checkbox' name='slaboral' value='si'checked> <br/>
+                    
+                    Acepto las condiciones de esta pagina 
+                    <input type='checkbox' name='slaboral' value='si'checked>
+            
+                <br/> <br>
+                <input type='submit' value='Enviar'>
+                <br/><br/><br/><br/>
+             </form>
+             </div>
      </div>
         <div id='backofficeUsuaris'>
-            <div id='backofficeUsuarisLoading'>Carregant usuaris ...</div>
-            <div id='backofficeUsuarisContinguts' class='flexColumn'></div>
+            
+            <div id='backofficeUsuarisContinguts' class='flexColumn'> </div>
+            <div id='backofficeUsuarisLoading'> <img id="foto" src="/web/imatges/cargando.gif"> </div>
+            
         </div>
         <div id='backofficeProductes'>
             Pàgina per fer la gestió dels productes
