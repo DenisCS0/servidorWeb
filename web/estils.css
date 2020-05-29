@@ -258,8 +258,6 @@ body > #frontendHome {
   align-items: center;
   text-align: center;
   z-index: -10;
-  
-
 }
 .viajes > div {
   margin: 16px;
@@ -297,7 +295,7 @@ body > #frontendHome {
     display: none;
 }
 @media only screen and (min-device-width: 599px) {
-.contenedor-slider {
+#contenedor-slider {
     margin: 36px auto;
     width: 85%;
     max-width: 900px;
@@ -305,10 +303,14 @@ body > #frontendHome {
     overflow: hidden;
     box-shadow: 0 0 0 10px #fff, 0 15px 50px;
     min-height: 500px;
-    margin-top: 100px;
+    margin-top: 50px;
     
 }
+.bienvenido {
+  text-align: center;
+  margin-top: 50px;
 
+}
 .slider {
     width: 100%;
     height: 100%;
@@ -359,10 +361,7 @@ body > #frontendHome {
     right: 10px;
   }
   
-  .back1 {
-    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/V%C3%A4xj%C3%B6_Cathedral_1.jpg/330px-V%C3%A4xj%C3%B6_Cathedral_1.jpg') center / cover;
-    
-  }
+  
 }
 th, td {
   border: 1px solid black;
@@ -488,4 +487,8 @@ td:first-child {
 #backofficeUsuarisContinguts {
   margin-top: 5%;
   margin-left: 2%;
+}
+.detall {
+  margin-top: 50px;
+  text-align: center;
 }
